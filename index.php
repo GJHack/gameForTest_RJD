@@ -16,15 +16,15 @@
 
   </div>
 
-  <!--Контейнер персонажа и спрайт START -->
+  <!-- START -->
     <?php
 
       foreach($gameObjects as $gameObject) {
         echo $gameObject->draw();
       }
-      
+
     ?>
-  <!--Контейнер персонажа и спрайт END -->
+  <!-- END -->
 
   <div id = "start" class = "start"></div>
 

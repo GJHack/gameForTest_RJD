@@ -1,8 +1,9 @@
-const [wolf, rabbit, cabbage, boat ] = [
+const [wolf, rabbit, cabbage, boat, mainContainer ] = [
                                        document.querySelector('#wolf'),
                                        document.querySelector('#rabbit'),
                                        document.querySelector('#cabbage'),
-                                       document.querySelector('#boat')
+                                       document.querySelector('#boat'),
+                                       document.querySelector('.mainGameContainer'),
                                        ],
 
       endPointsList = document.querySelectorAll('.finishSpot');
@@ -64,10 +65,20 @@ const targeting = (evt) => {
       default:
         console.log("No no no");
     }
-    console.log(result)
-    console.log(result[result.length - 1])
+
   }
 
+  if(steps == 3) checkResult(result);
+
+},
+checkResult = (resultArray) => {
+
+  let popUp = document.createElement('div');
+  let textPopUp = document.createElement('h2');
+      textPopUp.innerText = (resultArray[resultArray.length - 1] != 'rabbit') ? "Ты проиграл :(" : "ПОЗДРАВЛЯЮ!";
+      popUp.append(textPopUp);
+      mainContainer.append(popUp);
+      popUp.classList.toggle('popUp');
 }
 
 document.addEventListener('click', (event) => targeting(event));
