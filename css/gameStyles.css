@@ -1,13 +1,10 @@
 body, html {
-
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-
 }
 
 .mainGameContainer {
-
   position: relative;
   display: flex;
   flex-direction: column;
@@ -16,11 +13,13 @@ body, html {
   margin: 9% auto 9% auto;
   background-image: url('../imgs/river.gif');
   background-size: 300px;
-
 }
 
 .goal {
   position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   top: 0;
   width: 100%;
   height: 20%;
@@ -45,6 +44,22 @@ body, html {
   height: 10vw;
 }
 .gameCharacters img {
+  position: absolute;
+  max-width: 80%;
+  max-height: 100%;
+}
+.goal div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 110;
+  width: 10vw;
+  height: 10vw;
+  border: 1px solid #333;
+  border-radius: 100%;
+}
+.goal div img {
   position: absolute;
   max-width: 80%;
   max-height: 100%;

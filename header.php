@@ -16,8 +16,6 @@
 
     <link rel="stylesheet" href="css/gameStyles.css">
 
-    <script type="text/javascript" src="js/gameScripts.js">
-
     </script>
 
   </head>
